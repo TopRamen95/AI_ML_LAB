@@ -1,14 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
 
 import pandas as pd
-
-
-# In[13]:
-
 
 df=pd.read_excel('C://Users//Sahyadri//Downloads//Employee_Salary_Dataset.xlsx')
 print("first few rows")
@@ -26,22 +17,3 @@ print("data with new coloumn(Bonus)")
 print(df)
 df.to_excel('Output.xlsx',index=False)
 print("Data written to output.xlsx")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
