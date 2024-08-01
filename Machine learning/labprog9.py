@@ -2,13 +2,13 @@ import numpy as np
 import pandas as pd
 import csv
 from pgmpy.estimators import MaximumLikelihoodEstimator
-from pgmpy.models import BayesianModel
+from pgmpy.models import BayesianNetwork
 from pgmpy.inference import VariableElimination
 
 heartDisease = pd.read_csv('heart.csv')
 heartDisease = heartDisease.replace('?', np.nan)
 
-model = BayesianModel([
+model = BayesianNetwork([
     ('age', 'heartdisease'),
     ('sex', 'heartdisease'),
     ('exang', 'heartdisease'),
