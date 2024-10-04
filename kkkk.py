@@ -28,21 +28,8 @@ plt.title('Restaurant performance')
 plt.show()
 
 
-import pandas as pd 
-import numpy as np
-import matplotlib.pyplot as plt
-%matplotlib inline
-scales=pd.read_csv("")
-plt.figure(figsize=(10,6),dpi=300)
-labels=scales.columns[2:]
-plt.stackplot('Quarter','Apple','Samsung','Huaweu','Xiaomi','OPPO',data=scales,labels=labels)
-plt.legends()
-plt.xlabels('Quarter')
-plt.ylabel('scales unit in thousands')
-plt.title('Smart phones scales unit')
-plt.show()
-===============================
 
+==================================================================================
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
