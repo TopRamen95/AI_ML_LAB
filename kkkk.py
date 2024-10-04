@@ -29,12 +29,12 @@ plt.show()
 
 
 import pandas as pd 
-import numpy sa np
+import numpy as np
 import matplotlib.pyplot as plt
 %matplotlib inline
 scales=pd.read_csv("")
 plt.figure(figsize=(10,6),dpi=300)
-labels==scales.columns[2:]
+labels=scales.columns[2:]
 plt.stackplot('Quarter','Apple','Samsung','Huaweu','Xiaomi','OPPO',data=scales,labels=labels)
 plt.legends()
 plt.xlabels('Quarter')
