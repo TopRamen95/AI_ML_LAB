@@ -11,17 +11,17 @@ grammar = CFG.fromstring("""
     VP -> V NP | V NP PP
     PP -> P NP
     V -> "saw" | "ate" | "walked"
-    NP -> "John" | "Mary" | "Bob" | Det N | Det N PP
-    Det -> "a" | "an" | "the" | "my"
-    N -> "man" | "dog" | "cat" | "telescope" | "park" | "Moon" | "Terrace"
-    P -> "in" | "on" | "by" | "with" | "From"
+    NP -> "John" | "Mary" | "Bob" | Det N | Det N PP | "Rahil" | "Moon" | "terrace"
+    Det -> "a" | "an" | "the" | "my" | "his"
+    N -> "man" | "dog" | "cat" | "telescope" | "park" | "Moon" | "terrace"
+    P -> "in" | "on" | "by" | "with" | "from"
 """)
 
 # Create a parser
 parser = nltk.ChartParser(grammar)
 
 # Parse a sentence
-sentence = "John saw the man in the park".split()
+sentence = "Rahil saw the Moon with the telescope from his terrace".split()
 for tree in parser.parse(sentence):
     print(tree)
     tree.pretty_print()
