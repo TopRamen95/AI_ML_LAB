@@ -1,6 +1,6 @@
 import nltk
 from nltk import CFG
-from nltk.tree import Tree
+from nltk.parse.chart import ChartParser, TopDownChartParser, BottomUpChartParser
 
 # Print the version of nltk
 print(nltk.__version__)
@@ -17,11 +17,19 @@ grammar = CFG.fromstring("""
     P -> "in" | "on" | "by" | "with" | "from"
 """)
 
-# Create a parser
-parser = nltk.ChartParser(grammar)
+# Create parsers
+top_down_parser = TopDownChartParser(grammar)
+bottom_up_parser = BottomUpChartParser(grammar)
 
 # Parse a sentence
 sentence = "Rahil saw the Moon with the telescope from his terrace".split()
-for tree in parser.parse(sentence):
+
+print("Top-Down Parsing:")
+for tree in top_down_parser.parse(sentence):
+    print(tree)
+    tree.pretty_print()
+
+print("\nBottom-Up Parsing:")
+for tree in bottom_up_parser.parse(sentence):
     print(tree)
     tree.pretty_print()
