@@ -1,5 +1,6 @@
 import nltk
 from nltk.corpus import wordnet
+nltk.download('wordnet')
 def get_synonyms_antonyms(word):
     synonyms = []
     antonyms = []
@@ -15,7 +16,7 @@ def get_synonyms_antonyms(word):
     return set(synonyms), set(antonyms)
 
 # Example usage
-word = "active"
+word = input('Enter the word to get antonym and synonym:')
 synonyms, antonyms = get_synonyms_antonyms(word)
 
 print(f"Synonyms of '{word}': {synonyms}")
