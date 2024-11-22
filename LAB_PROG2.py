@@ -1,9 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[22]:
-
-
+#2a
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -43,7 +38,7 @@ plt.show()
 
 
 # In[24]:
-
+#2b
 
 movie_scores = pd.read_csv('D://datasets//exp2//movie_scores.csv')
 plt.figure(figsize=(10, 5), dpi = 300)
@@ -65,7 +60,7 @@ plt.show()
 
 # In[17]:
 
-
+#2c
 import pandas as sb
 import numpy as np
 import matplotlib.pyplot as plt
@@ -98,7 +93,7 @@ plt.show()
 
 # In[19]:
 
-
+#2d
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -125,8 +120,6 @@ plt.title('Smartphone Sales Units')
 # Show the plot
 plt.show()
 
-
-# In[ ]:
 
 
 
